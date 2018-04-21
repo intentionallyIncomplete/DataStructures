@@ -2,11 +2,9 @@ import java.util.ArrayList;
 import java.util.Queue;
 import java.util.Stack;
 
-/*
- *  Incomplete Driver for ArrayList(ObjectList), Stack and Queue
- * 
- * 
- */
+/*******************************************************/
+/* Ian Bryan - Main Driver for the other three classes */
+/*******************************************************/
 
 public class MainDriver {
 
@@ -17,51 +15,33 @@ public class MainDriver {
 	}
 
 	private static void arrayListTests() {
-		//todo: make more tests here
-		ArrayList a = new ArrayList();
-		
-		a.insert('B', 0);
-		a.insert('a',0);
-		a.insert('t',1);
-		
+		ArrayListLike a = new ArrayListLike(1);
 		System.out.println(a.toString());
-		
-		while(a.isEmpty() == false) {
-			System.out.println(a.remove(0));
-		}
-		
+//		while(a.isEmpty() == false) {
+//			System.out.println(a.remove(0));
+//		}
 	}
 
 	private static void queueTests() {
-		//todo: make more tests here
-		Queue a = new Queue();
-		
-		a.enqueue('B');
-		a.enqueue('a');
-		a.enqueue('t');
-		
+		QueueInterface a = new QueueInterface(10);
 		System.out.println(a.toString());
-		
-		while(a.isEmpty() == false) {
-			System.out.println(a.dequeue());
-		}
-
+//		while(a.isEmpty() == false) {
+//			System.out.println(a.dequeue());
+//		}
 	}
 
 	private static void stackTests() {
-		//todo: make more tests here
-		Stack a = new Stack();
-		
-		a.push('B');
-		a.push('a');
-		a.push('t');
+		StackInterface a = new StackInterface(10);
 		
 		System.out.println(a.toString());
 		
-		while(a.isEmpty() == false) {
-			System.out.println(a.pop());
-		}
+		/*****************************************************/
+		/* the checking for empty stacks is actually handled */
+		/* dynamically when pushing, popping.				 */
+		/*****************************************************/
+		
+//		while(a.isEmpty() == false) {
+//			System.out.println(a.pop());
+//		}
 	}
-	
-
 }
